@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática</title>
+
+<style>
+    .flex{
+        width: 300px;
+        padding: 10px;
+        border: 2px solid black;
+        background-color: blue;
+        display: flex;
+    }
+
+    .flex2{
+        width: 150px;
+        padding: 10px;
+        border: 2px solid black;
+        background-color: blue;
+        display: flex;
+    }
+
+    .flex3{
+        width: 150px;
+        height: 90px;
+        padding: 10px;
+        border: 2px solid black;
+        background-color: blue;
+        display: flex;
+    }
+
+    .flex4{
+        flex-wrap: wrap;
+        height: 350px;
+        max-width: 300px;
+        padding: 10px;
+        border: 2px solid black;
+        background-color: blue;
+        display: flex;
+    }
+
+    .item{
+        background-color: aqua;
+        margin: 5px;
+    }
+
+    .item2{
+        background-color: aqua;
+        margin: 5px;
+        flex: 1;
+    }
+
+
+    .row{
+        flex-direction: row;
+    }
+
+    .row-reverse{
+        flex-direction: row-reverse;
+    }
+    .column{
+        flex-direction: column;
+    }
+
+    .column-reverse{
+        flex-direction: column-reverse;
+    }
+
+    .nowrap{
+        flex-wrap: nowrap;
+    }
+
+    .wrap{
+        flex-wrap: wrap;
+    }
+
+    .wrap-reverse{
+        flex-wrap: wrap-reverse;
+    }
+
+    .flow{
+            flex-flow: column wrap-reverse;
+    }
+
+    .flex-start{
+        justify-content: flex-start;
+    }
+
+    .flex-end{
+        justify-content: flex-end;
+    }
+
+    .center{
+        justify-content: center;
+    }
+
+    .space-between{
+        justify-content: space-between;
+    }
+
+    .space-around{
+        justify-content: space-around;
+    }
+
+    .align_center{
+        align-items: center;
+    }
+
+    .stretch{
+        align-items: stretch;
+    }
+
+    .start{
+        align-items: flex-start;
+    }
+
+    .end{
+        align-items: flex-end;
+    }
+
+    .baseline{
+        align-items: baseline;
+    }
+
+    .cstretch{
+        align-content: stretch;
+    }
+
+    .ccenter{
+        align-content: center;
+    }
+
+    .cflex-start{
+        align-content: flex-start;
+    }
+
+    .cflex-end{
+        align-content: flex-end;
+    }
+
+    .cspace-around{
+        align-content: space-around;
+    }
+
+    .cspace-between{
+        align-content: space-between;
+    }
+
+    .o1{
+        order: 1;
+    }
+
+    .o2{
+        order: 2;
+    }
+
+    .o3{
+        order: 3;
+    }
+
+    .o4{
+        order: 4;
+    }
+
+
+
+
+</style>
+</head>
+
+<body>
+    <p> <strong>FlexBox</strong>: Transforma os itens do Container em "filhos", usa-se Diplay: flex</p>
+    <div class="flex">
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+    </div>
+    <p>Entretanto, se os itens ultrapassarem o tamanho definido do container, eles vazam.</p>
+    <div class="flex">
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+        <div class="item">item</div>
+    </div>
+
+    <hr>
+
+    <p>Usando <strong>Flex-direction</strong> você pode escolher a direção da disposição dos itens de uma Flex-Box</p>
+
+    <p>row (Padrão da Flex)</p>
+    <div class="flex row">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>row-reverse</p>
+    <div class="flex row-reverse">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>column</p>
+    <div class="flex column">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>column-reverse</p>
+    <div class="flex column-reverse">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <hr>
+    <p>Usando <strong>Flex-wrap</strong> Os itens tentam se ajustar ao conteiner, criando certa responsividade</p>
+
+    <p>nowrap (O padrão é não ter wrap)</p>
+    <div class="flex2 nowrap">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>wrap</p>
+    <div class="flex2 wrap">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>wrap-reverse</p>
+    <div class="flex2 wrap-reverse">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>wrap e column</p>
+    <div class="flex3 wrap column">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>wrap-reverse e column</p>
+    <div class="flex3 wrap-reverse column">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <hr>
+
+    <p>Usando <strong>Flex-flow</strong> você pode ajustar ambos em um só parâmetro: tipo de "wrap" e tipo de "direction"</p>
+
+    <p>flex-flow: wrap-reverse column</p>
+    <div class="flex3 flow">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <hr>
+
+    <p>A propriedade <strong>Justify Content</strong> vai tratar do alinhamento dos itens do conteiner e do espaço entre eles lá dentro</p>
+
+    <p>flex-start (Padrão - Já alinhado no início)</p>
+    <div class="flex flex-start">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+    </div>
+
+    <p>flex-end (Diferente do reverse, ele apenas alinha ao fim do conteiner)</p>
+    <div class="flex flex-end">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+    </div>
+
+    <p>center</p>
+    <div class="flex center">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+    </div>
+
+    <p>space-between (Espaçamento igual entre os itens dentro do conteiner)</p>
+    <div class="flex space-between">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+    </div>
+
+    <p>space-around (Espaçamento igual entre os itens considerando os arredores deles)</p>
+    <div class="flex space-around">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+    </div>
+
+    <hr>
+
+    <p>A propriedade <strong>Align Itens</strong> vai tratar do alinhamento dos itens de acordo com o eixo do conteiner</p>
+
+    <p>Center (Mantém alinhamento dos itens no centro)</p>
+    <div class="flex align_center">
+        <div class="item2">itemA</div>
+        <div class="item2">Super item B</div>
+        <div class="item2">itemC</div>
+        <div class="item2">itemD</div>
+        <div class="item2">Imenso Super item E</div>
+    </div>
+
+    <p>stretch (Estica o tamanho dos outros para o maior item )</p>
+    <div class="flex stretch">
+        <div class="item2">itemA</div>
+        <div class="item2">Super item B</div>
+        <div class="item2">itemC</div>
+        <div class="item2">itemD</div>
+        <div class="item2">Imenso Super item E</div>
+    </div>
+
+    <p>start (Mantém alinhamento dos itens no inicio, em cima se for row)</p>
+    <div class="flex start">
+        <div class="item2">itemA</div>
+        <div class="item2">Super item B</div>
+        <div class="item2">itemC</div>
+        <div class="item2">itemD</div>
+        <div class="item2">Imenso Super item E</div>
+    </div>
+
+    <p>end (Mantém alinhamento dos itens no fim, abaixo se for row)</p>
+    <div class="flex end">
+        <div class="item2">itemA</div>
+        <div class="item2">Super item B</div>
+        <div class="item2">itemC</div>
+        <div class="item2">itemD</div>
+        <div class="item2">Imenso Super item E</div>
+    </div>
+
+    <p>baseline (Não ultrapassa o limite da linha base criada no item A) </p>
+    <div class="flex baseline">
+        <div class="item2"> <hr> itemA </div>
+        <div class="item2">Super item B</div>
+        <div class="item2">itemC </div>
+        <div class="item2">itemD</div>
+        <div class="item2">Imenso Super item E</div>
+    </div>
+
+    <hr>
+
+    <p>A propriedade <strong>Align Content</strong> vai tratar do alinhamento das linhas do container em relação a seu eixo vertical</p>
+
+    <p>Para que essa propriedade funcione precimos que:</p>
+    <ul>
+        <li>O container utilize quebra de linhas</li>
+        <li>A altura do container seja maior que asoma da linha dos itens</li>
+    </ul>
+
+    <p>Center (Mantém alinhamento dos itens no centro)</p>
+    <div class="flex4 ccenter">
+        <div class="item2">Super Hyper Imenso item A</div>
+        <div class="item2">Super Imenso item B</div>
+        <div class="item2">Mega Super Hyper Imenso item C</div>
+        <div class="item2">Fantastic Mega Super Hyper Imenso item D</div>
+        <div class="item2">Awesome Fantastic Mega Super Hyper Imenso item E</div>
+    </div>
+
+    <p>stretch (Estica o tamanho dos outros para o maior item )</p>
+    <div class="flex4 cstretch">
+        <div class="item2">Super Hyper Imenso item A</div>
+        <div class="item2">Super Imenso item B</div>
+        <div class="item2">Mega Super Hyper Imenso item C</div>
+        <div class="item2">Fantastic Mega Super Hyper Imenso item D</div>
+        <div class="item2">Awesome Fantastic Mega Super Hyper Imenso item E</div>
+    </div>
+
+    <p>start (Mantém alinhamento dos itens no inicio, em cima se for row)</p>
+    <div class="flex4 cflex-start">
+        <div class="item2">Super Hyper Imenso item A</div>
+        <div class="item2">Super Imenso item B</div>
+        <div class="item2">Mega Super Hyper Imenso item C</div>
+        <div class="item2">Fantastic Mega Super Hyper Imenso item D</div>
+        <div class="item2">Awesome Fantastic Mega Super Hyper Imenso item E</div>
+    </div>
+
+    <p>end (Mantém alinhamento dos itens no fim, abaixo se for row)</p>
+    <div class="flex4 cflex-end">
+        <div class="item2">Super Hyper Imenso item A</div>
+        <div class="item2">Super Imenso item B</div>
+        <div class="item2">Mega Super Hyper Imenso item C</div>
+        <div class="item2">Fantastic Mega Super Hyper Imenso item D</div>
+        <div class="item2">Awesome Fantastic Mega Super Hyper Imenso item E</div>
+    </div>
+
+    <p>flex-around (espaçamento do meio é 2x maior que o inicial e final) </p>
+    <div class="flex4 cspace-around">
+        <div class="item2">Super Hyper Imenso item A</div>
+        <div class="item2">Super Imenso item B</div>
+        <div class="item2">Mega Super Hyper Imenso item C</div>
+        <div class="item2">Fantastic Mega Super Hyper Imenso item D</div>
+        <div class="item2">Awesome Fantastic Mega Super Hyper Imenso item E</div>
+
+    </div>
+
+    <p>flex-between (cria espaçamento igual) </p>
+    <div class="flex4 cspace-between">
+        <div class="item2">Super Hyper Imenso item A</div>
+        <div class="item2">Super Imenso item B</div>
+        <div class="item2">Mega Super Hyper Imenso item C</div>
+        <div class="item2">Fantastic Mega Super Hyper Imenso item D</div>
+        <div class="item2">Awesome Fantastic Mega Super Hyper Imenso item E</div>
+    </div>
+
+    <hr>
+
+    <p>Flexgrow</p>
+
+    <hr>
+
+    <p>Flexbasis</p>
+
+    <hr>
+
+    <p>Flexshrink</p>
+
+    <hr>
+
+    <p>Flex</p>
+
+    <hr>
+
+    <p> a propriedade <strong>Order</strong> permite que a ordem dos elementos dentro da frexbox seja alterada </p>
+
+    <p>Por padrão a "order" dos elementos é zero, mas isso pode ser modificado, mudando a "order" como uma classe</p>
+    <div class="flex row">
+        <div class="item">itemA</div>
+        <div class="item">itemB</div>
+        <div class="item">itemC</div>
+        <div class="item">itemD</div>
+        <div class="item">itemE</div>
+    </div>
+
+    <p>Cada item da cópia da div anterior recebeu uma classe de "order" diferente, a posição no HTML é a mesma</p>
+    <div class="flex row">
+        <div class="item o1">itemA</div>
+        <div class="item o2">itemB</div>
+        <div class="item o3">itemC</div>
+        <div class="item o4">itemD</div>
+        <div class="item os">itemE</div>
+    </div>
+
+    <hr>
+
+    <p>A propriedade <strong>Align self</strong> estabelece um alinhamento individual sobre determinado item </p>
+
+    <p>Ele é identico ao align content, só que deve ser aplicado no item ao invés do container, podendo ter diferentes tipos de alinhamento dentro do mesmo container</p>
+
+</body>
+</html>
+
+</html>
