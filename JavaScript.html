@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    
+</head>
+<body>
+    <h1 >JavaScript</h1>
+
+    <ul>
+        <li>Linguagem Interpretada - <span>Não há compilação; Tempo real</span> </li>
+        <li>Baseada em Protótipos - <span>Conjunto de funções</span></li>
+        <li>Multiparadgma - <span>Pode ser estruturada, orientada a objetos, etc</span></li>
+        <li>Web vlient-side - <span>Linguagem da internet</span></li>
+        <li>Padrão ECMAScript - <span>Conjunto de normas da ECMAScript</span></li>
+    </ul>
+
+    <hr>
+
+    <h2>Map, Filter e Reduce</h2>
+
+    <h3>Map</h3>
+    <p>Funciona como uma função matemática, que mapeia 2 conjuntos de dados.</p>
+    <ul>
+        <li>Cria um novo array (retorno)</li>
+        <li>Não modifica o array original</li>
+        <li>Realiza operações em ordem (index do array)</li>
+    </ul>
+    <p>
+        Criação do Map: <br>
+        array.map(callback, thisArg) <br>
+        <br>
+        callback-> Função a ser executada em cada elemento.<br>
+        callback(item, index, array) - não é necessário usar todos os parametros.<br>
+        thisArg -> É opcional. Valor de 'this' dentro da função de callback.<br>
+        <br>
+        exemplo: <br>
+        const array = [1, 2, 3, 4 ,5];<br>
+        array.map( function ); // função que mapeia é o parametro<br>
+        array.map( (item) => item * 2 ); // retorno: [2, 4, 6, 8, 10]<br>
+        <br>
+
+    <h3>Filter</h3>
+    <p>Coloca um array em um filtro</p>
+    <ul>
+        <li>Cria um novo array (retorno)</li>
+        <li>Não modifica o array original</li>
+    </ul>
+        Criação do Filter: <br>
+        array.filter(callback, thisArg) <br>
+        <br>
+        callback-> Função a ser executada em cada elemento.<br>
+        callback(item, index, array) - não é necessário usar todos os parametros.<br>
+        thisArg -> É opcional. Valor de 'this' dentro da função de callback.<br>
+        <br>
+        exemplo: <br>
+        const frutas = ['maçã fuji', 'maçã verde', 'laranja', 'abacaxi'];<br>
+        frutas.filter( function ); // função que filtrao array<br>
+        frutas.filter( (fruta) => fruta.include('maçã') ); // retorno: ['maçã fuji', 'maçã verde']<br>
+        <br>
+
+    <h3>Reduce</h3>
+    <p>Executa uma função em todos os elementos do array e retorna um valor único</p>
+
+        Criação do Reduce: <br>
+        array.reduce(callback, initialValue) <br>
+        <br>
+        callback-> Função a ser executada a partir do acumulador<br>
+        callback(accumulator, currentValue, index, array){ //do something } - não é necessário usar todos os parametros.<br>
+        initialValue -> valor sobre o qual o retorno final irá atuar<br>
+        accumulator - acumulador de todas as chamadas de callbackcurrentValue - elemento atual sendo acessado pela função <br>
+        <br>
+        exemplo: <br>
+        const frutas = ['maçã fuji', 'maçã verde', 'laranja', 'abacaxi'];<br>
+        frutas.filter( function ); // função que filtrao array<br>
+        frutas.filter( (fruta) => fruta.include('maçã') ); // retorno: ['maçã fuji', 'maçã verde']<br>
+        <br>
+
+    </p>
+
+    <hr>
+
+    <h2>Debugging & Error Handling</h2>
+    <p>"Tratamento de Erros"</p>
+
+    <h3>Tipos de Erros</h3>
+
+    <h4>ECMAScript Error</h4>
+    <p>Erros que ocorrem em tempo de execução</p>
+
+    <ul>
+        <li>Mensagem</li>
+        <li>Nome</li>
+        <li>Linha</li>
+        <li>Call Stack</li>
+    </ul>
+
+    <h4>DOMExpeption</h4>
+    <p>Erros relacionados ao Document Object Model (DOM)</p>
+
+    <h3>Tratando Erros</h3>
+
+    <h4>Throw</h4>
+    <p>Use "throw" invés de return para que o console entenda o retorno como um erro.</p>
+    <p>Exemplo:</p>
+    <p>if(!string) throw "string invalida"</p>
+
+
+    <h4>Try...Catch</h4>
+    <p></p>
+    <p>try{verificaPar(string)} catch(e) {console.log(e)}</p>
+    <p>ou</p>
+    <p>try{verificaPar(string)} catch(e) {throw e}</p>
+
+    <h4>Finally</h4>
+    <p>Executado de todo forma, após um erro</p>
+    <p>Exemplo:</p>
+    <p>try{verificaPar(string)} catch(e) {throw e} finally {console.log('foi enviado: ' + parametro)}</p>
+
+    <h3>Criando Erros</h3>
+
+    <p>Exemplo:
+        new Error(message, filename, lineNumber)
+        //parametros são opcionais, todos!
+        const meuErro = new Error('Mensagem Inválida')
+        meuErro.name = 'InvalidMessage'
+        
+        throw meuErro;
+
+    </p>
+
+    <h4>Objeto Error</h4>
+
+    <p>const NovoErro = new Error();
+
+        NovoErro.name = "Novo Erro";
+        NovoErro.message = "Erro foda"
+    </p>
+
+    <hr>
+
+    <h2>JavaScript Assíncrono</h2>
+
+    <h3>Assincronicidade</h3>
+
+    <h4>Promises</h4>
+    <p>Objeto de processamento assíncrono</p>
+
+    <p>Inicialmente, seu valor é desconhecido. Ela pode, então, ser <strong>resolvida</strong> ou <strong>rejeitada</strong> </p>
+    <p>Estados:</p>
+    <ul>
+        <li>Pendente</li>
+        <li>Completada</li>
+        <li>Rejeitada</li>
+    </ul>
+
+    <p>
+        async function resolvePromise(){
+            const myPromise = new Promise( (resolve, rejected) => {
+                window.setTimeout( () => resolve('resolvida');}, 2000);
+            })
+
+            const resolved = await myPromise
+                .then( (result) => result + " passando pelo then" )
+                .then( (result) => result + " e agora acabou" )
+                .catch( (err) => console.log(err.message) )
+
+            return resolved
+        }
+
+    </p>
+    //após 2 segundos retornam o valor
+
+    <p>
+        O resultado de uma promisse é outra promise, por isso, uma função asyns deve ser chamada pelo await
+    </p>
+
+    <h3>Consumindo APIs</h3>
+
+    <h4>API (Application Programming Interface)</h4>
+    <p>Uma API é uma forma de intermediar os resultados do back-end com o que é apresentado no front-end.</p>
+    <p>É comum que APIs retornem seus dados em formato .json, portanto precisam de tratamento de dados</p>
+
+    <h4>Fetch</h4>
+
+    fetch(url, options) //retorna uma promise
+        .then(responde => response.json())
+        .then(json => console.log(json))
+
+
+    <h3></h3>
+
+    <hr>
+
+    <h2>Orientação de Objetos</h2>
+
+    <h3>Paradgmas</h3>
+    <p>Pilares</p>
+    <ul>
+        <li>Abstração - Isolar, tornar algo complexo em coisas mais simples.</li>
+        <li>Heranças - Objeto filho herda propriedades e métodos do objeto pai.</li>
+        <li>Encapsulamento -  cada classe tem propriedades e métodos independentes do restante do código.</li>
+        <li>Polimorfismo - Objetos podem herdar a mesma classe pai, mas se comportam diferentes quando invocamos seus métodos.</li>
+    </ul>
+
+    <hr>
+
+    <h4>Manipulando o DOM</h4>
+    <p>Document Object Model</p>
+    <p>O DOM HTML é um padrão de como acessar e modificar elementos HTML de uma página.</p>
+
+    <h3>BOM</h3>
+    <p>Browser Object Model</p>
+    <p>É o objeto Window, o DOM está dentro dele.</p>
+    <p>Dentro: document, history, location, screen, navigator.</p>
+
+    <h3>Métodos</h3>
+    <p>doument.createElement(element) - Cria novo elemento HTML</p>
+    <p>doument.removeChild(element) - remove elemento HTML</p>
+    <p>doument.appendChild(element) - adiciona elemento HTML</p>
+    <p>doument.replaceChild(new,old) - substitue elemento HTML</p>
+
+
+    
+
+    
+</body>
+<script src="teste.js"></script>
+</html>
