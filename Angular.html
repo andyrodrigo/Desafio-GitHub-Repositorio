@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular</title>
+</head>
+<body>
+    <h1>Angular</h1>
+    <p>SPA - Single Page Application</p>
+    <hr>
+    <h2>Diretivas</h2>
+    <h2>Diretivas de Atributo:</h2>
+    <h3>ngStyle</h3> 
+    <p>Aplica um estilo diretamente na tag</p>
+    <p>Exemplo:</p>
+    <code>
+        (h2 [ngStyle]= "{background: count < 5 ? 'red' : 'green'}")Contador: {{ count }} (/h2)
+    </code>
+    <br>
+    <h3>ngClass</h3>
+    <p>Aplica uma classe diretamente na tag</p>
+    <p>Exemplo:</p>
+    <code>
+        (h2 [ngClass]= "{custom: count < 5 ? 'red' : 'green'}")Contador: {{ count }} (/h2)
+    </code>
+    <br>
+    <h2>Diretivas Estruturais:</h2>
+    <h3>ngIf</h3> 
+    <p>Aplica um if diretamente na tag</p>
+    <p>Exemplo:</p>
+    <code>
+        (h2 *ngIf= "count < 7") O contador passou de 7! (/h2)
+        Só surge na tela se a variavel count for maior que 7
+    </code>
+    <br>
+    <p>Exemplo com else:</p>
+    <code>
+        (h2 *ngIf= "count < 7 ; else menor" ) O contador passou de 7! (/h2)
+        (ng-Template #menor)O contador é menor que 7!(/ng-Template)
+
+        
+    </code>
+    <br>
+
+    
+</body>
+</html>
