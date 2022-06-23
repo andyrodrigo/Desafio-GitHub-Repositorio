@@ -79,6 +79,30 @@
         ]
     </code>
     <br>
+
+    <hr>
+
+    <p>Passando parâmetro do html para o ts:</p>
+    <code>
+        (button (click) ="clicou('Jorge')" )Clique(/button )
+
+        <p>Dentro da classe deste componente precisa da função:</p>
+        clicou(nome: string): void{
+            console.log(nome, 'clicou em mim!')
+        }
+    </code>
+
+    <h3>Two way data binding</h3>
+    <p>Atualiza tanto na ts quanto no html. Em tempo de execução</p>
+    <code>
+        (input type='text' placeholder='Digite: ' [(ngModel)]="texto")Clique(/input )
+        (h4)Saída: {{ texto }} (/h4)
+
+        <p>Dentro da classe deste componente precisa da variável:</p>
+        text = '';
+    </code>
+
+
     
 </body>
 </html>
