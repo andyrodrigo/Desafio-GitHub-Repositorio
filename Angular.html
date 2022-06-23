@@ -38,12 +38,47 @@
     <p>Exemplo com else:</p>
     <code>
         (h2 *ngIf= "count < 7 ; else menor" ) O contador passou de 7! (/h2)
-        (ng-Template #menor)O contador é menor que 7!(/ng-Template)
-
-        
+        (ng-Template #menor)O contador é menor que 7!(/ng-Template) 
     </code>
     <br>
+    <h3>ngSwitch</h3>
+    <p>Aplica um switch case diretamente na tag</p>
+    <p>Exemplo:</p>
+    <code>
+        (ul [ngSwitch] = "count")
+            (li *ngSwitchCase= "2")É igual a 2(/li)
+            (li *ngSwitchCase= "4")É igual a 4(/li)
+            (li *ngSwitchCase= "6")É igual a 6(/li)
+            (li *ngSwitchCase= "8")É igual a 8(/li)
+            (li *ngSwitchCase= "10")É igual a 10(/li)
+            (li *ngSwitchDefault)Padrão(/li)
+        (/ul)
+    </code>
+    <br>
+    <h3>ngFor</h3>
+    <p>Aplica um for diretamente na tag</p>
+    <p>Exemplo:</p>
+    <code>
+        (ul)
+            (li *ngFor= "let pessoa of pessoas")
+                O nome da pessoa é {{ pessoa.nome }}
+            (/li)
+        (/ul)
 
+        <p>Dentro da classe deste componente precisa ter esse vetor:</p>
+        pessoas = [
+        {
+            nome: andy,
+            idade: 38
+        },
+        {
+            nome: Jô,
+            idade: 37
+        },
+            etc...
+        ]
+    </code>
+    <br>
     
 </body>
 </html>
