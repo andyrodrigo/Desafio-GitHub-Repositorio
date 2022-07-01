@@ -101,6 +101,28 @@
         <p>Dentro da classe deste componente precisa da variável:</p>
         text = '';
     </code>
+
+    <h3>Style binding</h3>
+    <p>Muda o estilo através de uma variável dentro da classe</p>
+    <code>
+        (input type='button' [style.backGroungdColor]=bgColor)Clique(/input )
+
+        <p>Dentro da classe deste componente precisa da variável:</p>
+        bgColor = black;
+    </code>
+
+    <h3>Class binding</h3>
+    <p>Muda a classe de uma tag para uma classe existente no projeto</p>
+    <code>
+        (input type='button' [class]=TextRed )Clique(/input )
+
+        <p>Dentro do projeto deve existir uma classe chamada:</p>
+        TextRed;
+    </code>
+
+
+
+
     <hr>
     <h2>Serviços</h2>
     <p>classe para dados ou lógica que não está associado a alguma visualização específica para compartilhar entre os componentes.</p>
