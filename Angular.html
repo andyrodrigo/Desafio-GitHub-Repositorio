@@ -10,6 +10,10 @@
     <h1>Angular</h1>
     <p>SPA - Single Page Application</p>
     <hr>
+    <h2>componentes</h2>
+    <p>Blocos que, sozinhos, tem um sentido.</p>
+
+    <hr>
     <h2>Diretivas</h2>
     <h2>Diretivas de Atributo:</h2>
     <h3>ngStyle</h3> 
@@ -120,6 +124,32 @@
         TextRed;
     </code>
 
+    <h3>Parametro entre componentes</h3>
+    <p>Use o decorator: @input</p>
+    <code>
+        (app-button btnText='enviar' )(/appbutton )
+        (app-button btnText='cancelar' )(/appbutton )
+
+        <p>Dentro do componente button:</p>
+        @input = btnText: string = ''; //Inicia vazia, se quiser
+    </code>
+
+    <hr>
+    <h2>Pipes</h2>
+    <p>Funções simples que se pode usar em expressões no template para aceitar um valor de entrada e retornar um valor transformado</p>
+
+    <code>
+        <p>Pipe uppecase - a variável text é mostrada em maiúscula</p>
+        (p) {{ text | uppecase }}(/p)
+        <p>Pipe json - exibe um objeto como uma string com chaves e valores do objeto</p>
+        (p) {{ objeto | json }}(/p)
+        <p>Pipe slice - exibe os valores entre os dois numeros escolhidos</p>
+        (p) {{ texto | slice:1:5 }}(/p)
+
+        <p>Pure Pipe: Valores dos parametros de entrada determinam a saída, então, se os parâmetros de entrada não mudarem, a saída não mudará.</p>
+        <p>Inpure Pipe: Não pode usar os valores de entrada para determinar se a saída mudará.</p>
+
+    </code>    
 
 
 
