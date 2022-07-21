@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP</title>
+</head>
+
+<body>
+    <h1>PROTOCOLO HTTP</h1>
+    <p>HyperText Transfer Protocol</p>
+    <p>O Brower implementa o protocolo HTTP</p>
+    <p>Clientes: mensagens - Request HTTP</p>
+    <p>Servidor: mensagens - Response HTTP</p>
+    <p>GET, POST</p>
+    <p>GET - solicita dados do servidor</p>
+    <p>POST - envia dados ao servidor</p>
+    <p>XML E JSON</p>
+    <p>XML - metadados mais complexos</p>
+    <p>JSON - metadados mais simples</p>
+    <p>O Browser permite até 6 requests antes de esperar a resposta do servidor</p>
+   
+    <h2>Resquest e Respose</h2>
+    <h3>Request</h3>
+    <p>Dividida em Request Line e Header Line</p>
+    <p>Get:/algumDiretorio/page.html HTTP/1.1</p>
+    <p>Host: www.algumhost.edu</p>
+    <p>Connection: close (não persistente)</p>
+    <p>User agent: Mozilla/5.0</p>
+    <p>Accept Lang: pt-br (lingua preferencial)</p>
+    <p>GET - Solicita um rescurso do Servidor</p>
+    <p>HEAD - GET sem corpo de resposta</p>
+    <p>POST - Submete uma entidade a um recurso</p>
+    <p>PUT - Substituição de recursos por dados da requisição</p>
+    <p>DELETE - remoção de um recurso</p>
+    <p>TRACE - chamada de loop-back a um determinado recurso</p>
+    <p>OPTION - opções de comunicacação com recurso</p>
+    <p>CONNECT - tunelamentoidentificado pelo recurso</p>
+    <p>PATCH - modificação parcial</p>
+
+    <p>Metodos Seguros - GET, HEAD e OPTION</p>
+
+    <h3>Response</h3>
+    <p>Dividida em Status Line, Header Line e entity body</p>
+
+    <p>Status Code</p>
+    <p>(100-199) informação</p>
+    <p>(200-299) Sucesso</p>
+    <p>(300-399) Redirecionamento</p>
+    <p>(400 -499) Erro no Cliente</p>
+    <p>(500-599) Erro no Servidor</p>
+
+    <h2>Cookies e Chache</h2>
+    <p><h3>Cookies</h3></p>
+    <p>Pequenos pedaços ou blocos de dados criados e utilizados pelo servidor para persistir dados no dispositivo do cliente.</p>
+    <p>Ou seja: rastrear o cliente quando estiver no site</p>
+    <p>Pode ser Persistente (ex: Longin ativo, n requisita dados novamente) ou de sessão (Exemplo: encerra junto com a sessão, requer dados delogin novamente)</p>
+
+    <h2>Cache</h2>
+    <p>Armazena dados do servidor em um Proxy, servido como um Proxy server se os dados solicitados pelo clinte estiverem nele.</p>
+    <p>Caso não estejam, ele solicita ao servidor, armazena os dados e envia ao cliente </p>
+    <p>Vantagens: Redução de tempo de resposta e de tráfedo na rede </p>
+</body>
+
+</html>
