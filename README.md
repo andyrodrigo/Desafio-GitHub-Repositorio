@@ -6,11 +6,13 @@
 
 >Devido a simplicidade de ser apenas um repositório demostrativo, eu o utilizo para guardar algumas informações sobre linguagens que podem me servir de lembretes no futuro, com resumos rápidos e exemplos visuais. Além de guardar alguns link úteis nesse próprio Readme.
 
-## Exemplo
+<hr>
 
-![Exemplo de uma página mostrando Flexbox] (/Flex.png "Flexbox")
+## Exemplo:
 
-## Links Úteis
+<img src="Flex.png"/>
+
+## Links Úteis:
 
 - [Sintaxe Básica de Markdown] (https://www.markdownguide.org/)
 - [Site com vários exeplos de HTML e CSS] (https://www.w3schools.com/)
