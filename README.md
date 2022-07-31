@@ -8,7 +8,7 @@
 
 ## Exemplo
 
-![Exemplo de uma página mostrando Flexbox] (Flex.png)
+![Exemplo de uma página mostrando Flexbox] (/Flex.png "Flexbox")
 
 ## Links Úteis
 
