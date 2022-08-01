@@ -14,8 +14,9 @@
 
 ## Links Úteis:
 
-- [Sintaxe Básica de Markdown] (https://www.markdownguide.org/)
-- [Site com vários exeplos de HTML e CSS] (https://www.w3schools.com/)
+- [Sintaxe Básica de Markdown](https://www.markdownguide.org/)
+- [Código dos Emojis](https://emojiterra.com/pt/pc/)
+- [Site com vários exemplos de HTML e CSS](https://www.w3schools.com/)
 
 
 
